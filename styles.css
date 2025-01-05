@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Gaya Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+body {
+    line-height: 1.6;
+    color: #ffffff;
+    background-color: #b8b8b8;
+}
+
+/* Sampul Selamat Datang */
+#cover {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom, #2C3E50, #4CA1AF);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.welcome-container h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.welcome-container p {
+    font-size: 18px;
+    max-width: 500px;
+    line-height: 1.5;
+}
+
+.welcome-container button {
+    background-color: white;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.welcome-container button:hover {
+    background-color: #ff6600;
+    color: hwb(0 100% 0%);
+    transform: scale(1.1);
+}
+
+/* Foto Lingkaran */
+.profile-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid rgb(255, 255, 255);
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigasi */
+nav {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #969696;
+    border-radius: 5px;
+}
+
+/* Bagian Konten */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    opacity: 0; /* Untuk animasi */
+    transform: translateY(20px); /* Untuk animasi */
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #ffffff;
+}
+
+section p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Galeri */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-container img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Tombol Kembali ke Atas */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1f1f1f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Tombol hanya muncul saat di-scroll ke bawah */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#backToTop:hover {
+    transform: scale(1.2);
+    background-color: #8a8a8a;
+}
+
+/* Animasi */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* Reset Margin dan Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    line-height: 1.6;
+}
+
+/* Navigasi */
+nav {
+    background-color: #333;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Home */
+#home {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #1f1f1f;
+    color: d5dbdb;
+}
+
+#home h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Tentang Saya */
+#about {
+    padding: 50px 20px;
+    background-color: rgb(118, 121, 121);
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Foto (Slider) */
+#photos {
+    padding: 50px 20px;
+    background-color: #1f1f1f;
+    text-align: center;
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden; /* Menyembunyikan gambar yang tidak tampak */
+}
+
+.carousel-slide {
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out; /* Menambahkan animasi geser gambar */
+}
+
+.carousel-slide figure {
+    margin: 0 20px;
+    display: inline-block; /* Membuat setiap gambar berdiri sendiri */
+    width: 400px;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto; /* Membiarkan tinggi menyesuaikan */
+}
+
+/* Tombol navigasi */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+/* Galeri Foto */
+#gallery {
+    padding: 50px 20px;
+    background-color: #1f1f1f;
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Memberi jarak antar gambar */
+}
+
+.gallery-container figure {
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Kontak */
+#contact {
+    padding: 50px 20px;
+    background-color: #585858;
+    color: white;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form textarea {
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555;
+}
